@@ -3,8 +3,13 @@
   {% include head.html %}
   <body class="body {% if page.body_class %}{{page.body_class}}{% endif %}">
     {% include header.html %}
-    <div class="body__contained">
-      {{ content }}
+    <div class="container">
+      <div class="row">
+        {% include sections-navigation/documentation.html %}
+        <div class="col-md-9 body__contained">
+          {{ content }}
+        </div>
+      </div>
     </div>
     {% include footer.html %}
   </body>

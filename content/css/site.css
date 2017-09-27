@@ -6483,3 +6483,17 @@ body {
         .pillars .pillars__cols .pillars__cols__col .pillars__cols__col__body {
           padding: 0 30px;
           margin: 0 auto; } }
+
+body .major-section-nav {
+  height: 100vh; }
+  body .major-section-nav nav {
+    max-height: calc(90vh - 100px);
+    overflow-y: scroll; }
+    body .major-section-nav nav > .major-section-nav-list {
+      list-style: none;
+      padding: 0; }
+      body .major-section-nav nav > .major-section-nav-list > li {
+        margin-bottom: 15px; }
+  body .major-section-nav-list-title {
+    display: block;
+    margin-bottom: 15px; }

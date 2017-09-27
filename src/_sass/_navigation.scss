@@ -1,0 +1,26 @@
+body {
+
+  .major-section-nav {
+    height: 100vh;
+
+    nav {
+      max-height: calc(90vh - 100px);
+      overflow-y: scroll;
+
+      > .major-section-nav-list {
+        list-style: none;
+
+        padding: 0;
+
+        > li {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    &-list-title {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+}
