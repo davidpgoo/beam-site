@@ -2,6 +2,7 @@
 layout: default
 title: "Use Beam"
 permalink: /get-started/
+side_nav: sections-navigation/get-started.html
 redirect_from:
   - /use/
   - /docs/use/

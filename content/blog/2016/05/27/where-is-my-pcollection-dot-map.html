@@ -11,6 +11,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/language-switch.js"></script>
+  <script src="/js/fix-menu.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/pagenav.js"></script>
   <link rel="canonical" href="https://beam.apache.org/blog/2016/05/27/where-is-my-pcollection-dot-map.html" data-proofer-ignore>
   <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="Apache Beam" href="https://beam.apache.org/feed.xml">
@@ -24,20 +27,24 @@
   </script>
 </head>
 
-  <body class="body ">
+  <body class="body " data-spy="scroll" data-target=".nav-page" data-offset="0">
     <nav class="header navbar navbar-fixed-top">
     <div class="navbar-header">
+      <button type="button" class="navbar-toggle" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
       <a href="/" class="navbar-brand" >
         <img alt="Brand" style="height: 25px" src="/images/beam_logo_navbar.png">
       </a>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
+
+    <div class="navbar-mask closed"></div>
+
+    <div id="navbar" class="navbar-container closed">
       <ul class="nav navbar-nav">
         <li>
           <a href="/get-started/beam-overview/">Get Started</a>
@@ -69,62 +76,14 @@
           </ul>
         </li>
       </ul>
-    </div><!--/.nav-collapse -->
+    </div>
 </nav>
 
-    <div class="container">
-      <div class="row">
-        <div class="major-section-nav col-md-3 hidden-sm hidden-xs">
-  <nav>
-    <ul class="major-section-nav-list" data-spy="affix" data-offset-bottom="500">
-      <li><a href="/documentation">Using the Documentation</a></li>
-      <li>
-        <strong class="major-section-nav-list-title">Pipeline development lifecycle</strong>
-
-        <ul class="major-section-nav-list">
-          <li><a href="/documentation/pipelines/design-your-pipeline/">Design Your Pipeline</a></li>
-          <li><a href="/documentation/pipelines/create-your-pipeline/">Create Your Pipeline</a></li>
-          <li><a href="/documentation/pipelines/test-your-pipeline/">Test Your Pipeline</a></li>
-        </ul>
-      </li>
-      <li>
-        <strong class="major-section-nav-list-title">Beam programming guide</strong>
-
-        <ul class="major-section-nav-list">
-          <li><a href="/documentation/programming-guide/#overview">Pipelines</a></li>
-          <li><a href="/documentation/programming-guide/#pcollections">PCollections</a></li>
-          <li>
-            <a href="/documentation/programming-guide/#transforms">Transforms</a>
-
-            <ul class="major-section-nav-list">
-              <li><a href="/documentation/programming-guide/#applying-transforms">Applying transforms</a></li>
-              <li><a href="/documentation/programming-guide/#pardo">ParDo</a></li>
-              <li><a href="/documentation/programming-guide/#flatten">Flatten</a></li>
-              <li><a href="/documentation/programming-guide/#groupbykey">GroupByKey</a></li>
-              <li><a href="/documentation/programming-guide/#composite-transforms">Composite transforms</a></li>
-            </ul>
-          </li>
-          <li><a href="/documentation/programming-guide/#windowing">Windowing</a></li>
-          <li><a href="/documentation/programming-guide/#triggers">Triggers</a></li>
-        </ul>
-      </li>
-      <li>
-        <strong class="major-section-nav-list-title">Pipeline I/O</strong>
-
-        <ul class="major-section-nav-list">
-          <li><a href="/documentation/io/io-toc/">Supported I/O transforms</a></li>
-          <li><a href="/documentation/io/io-toc/">Using I/O transforms</a></li>
-          <li><a href="/documentation/io/authoring-overview/">Authoring new I/O transforms</a></li>
-          <li><a href="/documentation/io/testing/">Testing I/O transforms</a></li>
-        </ul>
-      </li>
-      <li><a href="/documentation/programming-guide/#data-encoding-and-type-safety">Data encoding and type safety</a></li>
-    </ul>
-  </nav>
-</div>
-
-        <div class="col-md-9 body__contained">
-          
+    <div class="clearfix container-main-content">
+      
+      
+      <div class="body__contained ">
+        
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -220,7 +179,6 @@ PCollection&lt;O&gt; output = input
 
 </article>
 
-        </div>
       </div>
     </div>
     <footer class="footer">

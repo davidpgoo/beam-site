@@ -6086,8 +6086,9 @@ body {
   padding-top: 130px; }
   .body:not(.body--index) .body__contained {
     padding: 0 30px;
-    max-width: 1280px;
-    margin: 0 auto; }
+    max-width: 1280px; }
+    .body:not(.body--index) .body__contained figure img {
+      width: 100%; }
 
 .section:not(.section--wide) {
   padding-right: 30px;
@@ -6484,16 +6485,145 @@ body {
           padding: 0 30px;
           margin: 0 auto; } }
 
-body .major-section-nav {
-  height: 100vh; }
-  body .major-section-nav nav {
-    max-height: calc(90vh - 100px);
-    overflow-y: scroll; }
-    body .major-section-nav nav > .major-section-nav-list {
-      list-style: none;
+.nav-section {
+  max-width: 250px;
+  position: fixed;
+  width: 100%; }
+  .nav-section nav {
+    background-color: #F7F7F7;
+    padding: 15px;
+    max-height: calc(100vh - 130px);
+    overflow-y: auto; }
+    .nav-section nav ul {
+      list-style: none; }
+    .nav-section nav li {
+      margin-bottom: 5px; }
+    .nav-section nav > .nav-section-list {
       padding: 0; }
-      body .major-section-nav nav > .major-section-nav-list > li {
-        margin-bottom: 15px; }
-  body .major-section-nav-list-title {
+      .nav-section nav > .nav-section-list .nav-section-list {
+        padding-left: 10px; }
+    @media (max-width: 1024px) {
+      .nav-section nav {
+        background-color: #FFF;
+        max-height: 100vh; } }
+  .nav-section-back {
+    display: none;
+    padding: 15px; }
+    @media (max-width: 1024px) {
+      .nav-section-back {
+        display: block; } }
+  .nav-section-list-title {
     display: block;
-    margin-bottom: 15px; }
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-top: 15px; }
+  @media (max-width: 1024px) {
+    .nav-section {
+      background-color: #f7f7f7;
+      bottom: 0;
+      left: 0;
+      max-width: 256px;
+      position: fixed;
+      top: 0;
+      transition: transform 100ms linear;
+      width: calc(100% - 32px);
+      z-index: 10000; }
+      .nav-section nav {
+        height: calc(100vh - 44px);
+        overflow-y: auto; }
+      .nav-section.closed {
+        transform: translateX(-100%); }
+      .nav-section.open {
+        transform: translateX(0); } }
+
+.body__nav-section {
+  margin-left: 256px;
+  width: calc(100% - 492px); }
+  @media (max-width: 1024px) {
+    .body__nav-section {
+      margin-left: 0;
+      width: 100%; } }
+
+.container-main-content {
+  padding: 0 20px;
+  position: relative; }
+
+.navbar .navbar-toggle {
+  float: left; }
+  @media (max-width: 1024px) {
+    .navbar .navbar-toggle {
+      display: block; } }
+@media (max-width: 1024px) {
+  .navbar .navbar-container {
+    background-color: #fff;
+    bottom: 0;
+    min-height: 100vh;
+    max-width: 256px;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    transition: transform 100ms linear;
+    width: calc(100% - 32px); }
+    .navbar .navbar-container .navbar-nav > li {
+      width: 100%; }
+    .navbar .navbar-container.closed {
+      transform: translateX(-100%); }
+    .navbar .navbar-container.open {
+      transform: translateX(0); } }
+.navbar .navbar-mask {
+  background: #212121;
+  bottom: 0;
+  display: none;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  transition: opacity 200ms; }
+  @media (max-width: 1024px) {
+    .navbar .navbar-mask {
+      display: block; }
+      .navbar .navbar-mask.closed {
+        opacity: 0;
+        width: 0; }
+      .navbar .navbar-mask.open {
+        opacity: 0.5;
+        width: 100%; } }
+@media (max-width: 1024px) {
+  .navbar .navbar-right {
+    margin-right: -15px; } }
+
+.body__nav-section > [id]:before {
+  content: '';
+  display: block;
+  height: 82px;
+  /* fixed header height*/
+  margin: -82px 0 0;
+  /* negative fixed header height */ }
+
+.nav-page {
+  border-left: 3px solid #FF6D00;
+  overflow-y: auto;
+  max-height: calc(100vh - 130px);
+  padding: 0 15px;
+  position: fixed;
+  width: 240px; }
+  .nav-page li {
+    display: block;
+    width: 100%; }
+    .nav-page li a {
+      color: #37424B;
+      display: block;
+      padding: 5px; }
+    .nav-page li.active > a {
+      font-weight: bold; }
+    .nav-page li.active li.active a {
+      text-decoration: underline; }
+    .nav-page li ul {
+      padding-left: 20px; }
+  @media (max-width: 1024px) {
+    .nav-page {
+      margin-top: 0;
+      max-height: initial;
+      right: 0;
+      padding: 0 30px;
+      position: relative;
+      width: 100%; } }

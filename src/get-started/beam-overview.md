@@ -2,6 +2,7 @@
 layout: default
 title: "Beam Overview"
 permalink: /get-started/beam-overview/
+side_nav: sections-navigation/get-started.html
 redirect_from:
   - /use/beam-overview/
   - /docs/use/beam-overview/
@@ -40,7 +41,7 @@ Beam currently supports Runners that work with the following distributed process
          alt="Apache Spark">
 * Google Cloud Dataflow <img src="{{ site.baseurl }}/images/logos/runners/dataflow.png"
          alt="Google Cloud Dataflow">
-    
+
 **Note:** You can always execute your pipeline locally for testing and debugging purposes.
 
 ## Get Started

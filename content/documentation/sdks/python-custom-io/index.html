@@ -12,6 +12,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/language-switch.js"></script>
+  <script src="/js/fix-menu.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/pagenav.js"></script>
   <link rel="canonical" href="https://beam.apache.org/documentation/sdks/python-custom-io/" data-proofer-ignore>
   <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="Apache Beam" href="https://beam.apache.org/feed.xml">
@@ -25,20 +28,24 @@
   </script>
 </head>
 
-  <body class="body ">
+  <body class="body " data-spy="scroll" data-target=".nav-page" data-offset="0">
     <nav class="header navbar navbar-fixed-top">
     <div class="navbar-header">
+      <button type="button" class="navbar-toggle" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
       <a href="/" class="navbar-brand" >
         <img alt="Brand" style="height: 25px" src="/images/beam_logo_navbar.png">
       </a>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
+
+    <div class="navbar-mask closed"></div>
+
+    <div id="navbar" class="navbar-container closed">
       <ul class="nav navbar-nav">
         <li>
           <a href="/get-started/beam-overview/">Get Started</a>
@@ -70,62 +77,75 @@
           </ul>
         </li>
       </ul>
-    </div><!--/.nav-collapse -->
+    </div>
 </nav>
 
-    <div class="container">
-      <div class="row">
-        <div class="major-section-nav col-md-3 hidden-sm hidden-xs">
-  <nav>
-    <ul class="major-section-nav-list" data-spy="affix" data-offset-bottom="500">
-      <li><a href="/documentation">Using the Documentation</a></li>
-      <li>
-        <strong class="major-section-nav-list-title">Pipeline development lifecycle</strong>
+    <div class="clearfix container-main-content">
+      
+      <div class="nav-section closed" data-offset-top="90" data-offset-bottom="500">
+        <span class="nav-section-back glyphicon glyphicon-menu-left"></span>
+        <nav>
+          <ul class="nav-section-list" data-section-nav>
+            <li><a href="/documentation/sdks/java/">Beam SDK feature comparison</a></li>
+<li><a href="/documentation/sdks/java/">Java SDK</a></li>
+<li><a href="/documentation/sdks/javadoc/2.1.0/" target="_blank">Java SDK API Reference <img src="/images/external-link-icon.png"
+                                                                                                                                   width="14" height="14"
+                                                                                                                                              alt="External link."></a>
+</li>
+<li><a href="/documentation/sdks/python/">Python SDK</a></li>
+<li><a href="/documentation/sdks/pydoc/2.1.0/" target="_blank">Python SDK API Reference <img src="/images/external-link-icon.png"
+                                                                                                                                   width="14" height="14"
+                                                                                                                                              alt="External link."></a>
+</li>
+<li>
+  <span class="section-nav-list-title">DSLs</span>
 
-        <ul class="major-section-nav-list">
-          <li><a href="/documentation/pipelines/design-your-pipeline/">Design Your Pipeline</a></li>
-          <li><a href="/documentation/pipelines/create-your-pipeline/">Create Your Pipeline</a></li>
-          <li><a href="/documentation/pipelines/test-your-pipeline/">Test Your Pipeline</a></li>
-        </ul>
-      </li>
-      <li>
-        <strong class="major-section-nav-list-title">Beam programming guide</strong>
+  <ul class="section-nav-list">
+    <li><a href="/documentation/dsls/sql/">SQL</a></li>
+  </ul>
+</li>
 
-        <ul class="major-section-nav-list">
-          <li><a href="/documentation/programming-guide/#overview">Pipelines</a></li>
-          <li><a href="/documentation/programming-guide/#pcollections">PCollections</a></li>
-          <li>
-            <a href="/documentation/programming-guide/#transforms">Transforms</a>
-
-            <ul class="major-section-nav-list">
-              <li><a href="/documentation/programming-guide/#applying-transforms">Applying transforms</a></li>
-              <li><a href="/documentation/programming-guide/#pardo">ParDo</a></li>
-              <li><a href="/documentation/programming-guide/#flatten">Flatten</a></li>
-              <li><a href="/documentation/programming-guide/#groupbykey">GroupByKey</a></li>
-              <li><a href="/documentation/programming-guide/#composite-transforms">Composite transforms</a></li>
-            </ul>
-          </li>
-          <li><a href="/documentation/programming-guide/#windowing">Windowing</a></li>
-          <li><a href="/documentation/programming-guide/#triggers">Triggers</a></li>
-        </ul>
-      </li>
-      <li>
-        <strong class="major-section-nav-list-title">Pipeline I/O</strong>
-
-        <ul class="major-section-nav-list">
-          <li><a href="/documentation/io/io-toc/">Supported I/O transforms</a></li>
-          <li><a href="/documentation/io/io-toc/">Using I/O transforms</a></li>
-          <li><a href="/documentation/io/authoring-overview/">Authoring new I/O transforms</a></li>
-          <li><a href="/documentation/io/testing/">Testing I/O transforms</a></li>
-        </ul>
-      </li>
-      <li><a href="/documentation/programming-guide/#data-encoding-and-type-safety">Data encoding and type safety</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      
+        <nav class="nav-page clearfix" data-offset-top="90" data-offset-bottom="500">
+          
+<ul class="nav">
+  <li><a href="#why-create-a-new-source-or-sink">Why Create a New Source or Sink</a></li>
+  <li><a href="#a-namebasic-code-reqsabasic-code-requirements-for-new-sources-and-sinks"><a name="basic-code-reqs"></a>Basic Code Requirements for New Sources and Sinks</a>
+    <ul>
+      <li><a href="#serializability">Serializability</a></li>
+      <li><a href="#immutability">Immutability</a></li>
+      <li><a href="#thread-safety">Thread-Safety</a></li>
+      <li><a href="#testability">Testability</a></li>
     </ul>
-  </nav>
-</div>
+  </li>
+  <li><a href="#a-namecreating-sourcesacreating-a-new-source"><a name="creating-sources"></a>Creating a New Source</a>
+    <ul>
+      <li><a href="#implementing-the-boundedsource-subclass">Implementing the BoundedSource Subclass</a></li>
+      <li><a href="#implementing-the-rangetracker-subclass">Implementing the RangeTracker Subclass</a></li>
+      <li><a href="#convenience-source-base-classes">Convenience Source Base Classes</a></li>
+    </ul>
+  </li>
+  <li><a href="#a-namereading-sourcesareading-from-a-new-source"><a name="reading-sources"></a>Reading from a New Source</a></li>
+  <li><a href="#a-namecreating-sinksacreating-a-new-sink"><a name="creating-sinks"></a>Creating a New Sink</a>
+    <ul>
+      <li><a href="#implementing-the-sink-subclass">Implementing the Sink Subclass</a></li>
+      <li><a href="#implementing-the-writer-subclass">Implementing the Writer Subclass</a></li>
+      <li><a href="#convenience-sink-and-writer-base-classes">Convenience Sink and Writer Base Classes</a></li>
+    </ul>
+  </li>
+  <li><a href="#a-namewriting-sinksawriting-to-a-new-sink"><a name="writing-sinks"></a>Writing to a New Sink</a></li>
+  <li><a href="#a-nameptransform-wrappersaptransform-wrappers"><a name="ptransform-wrappers"></a>PTransform Wrappers</a></li>
+</ul>
 
-        <div class="col-md-9 body__contained">
-          <h1 id="creating-new-sources-and-sinks-with-the-python-sdk">Creating New Sources and Sinks with the Python SDK</h1>
+
+        </nav>
+      
+      <div class="body__contained body__nav-section">
+        <h1 id="creating-new-sources-and-sinks-with-the-python-sdk">Creating New Sources and Sinks with the Python SDK</h1>
 
 <p>The Apache Beam SDK for Python provides an extensible API that you can use to create new data sources and sinks. This tutorial shows how to create new sources and sinks using <a href="https://github.com/apache/beam/blob/master/sdks/python/apache_beam/io/iobase.py">Beam’s Source and Sink API</a>.</p>
 
@@ -565,8 +585,6 @@ numbers = p | 'ProduceNumbers' &gt;&gt; ReadFromCountingSource(count)
 </code></pre>
 </div>
 
-
-        </div>
       </div>
     </div>
     <footer class="footer">

@@ -2,6 +2,7 @@
 layout: default
 title: "Beam Mobile Gaming Example"
 permalink: /get-started/mobile-gaming-example/
+side_nav: sections-navigation/get-started.html
 redirect_from: /use/mobile-gaming-example/
 ---
 
@@ -385,4 +386,3 @@ This gives us a set of user sessions, each with an attached duration. We can the
 %}```
 
 We can use the resulting information to find, for example, what times of day our users are playing the longest, or which stretches of the day are more likely to see shorter play sessions.
-

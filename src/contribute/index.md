@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 'Contribute to Beam'
+side_nav: sections-navigation/contribute.html
 redirect_from: '/docs/contribute'
 ---
 

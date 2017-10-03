@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Built-in I/O Transforms"
+side_nav: sections-navigation/documentation.html
 permalink: /documentation/io/built-in/
 ---
 

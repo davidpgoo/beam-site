@@ -2,6 +2,7 @@
 layout: default
 title: "Cloud Dataflow Runner"
 permalink: /documentation/runners/dataflow/
+side_nav: sections-navigation/runners.html
 redirect_from: /learn/runners/dataflow/
 ---
 # Using the Google Cloud Dataflow Runner
@@ -168,4 +169,3 @@ To block until your job completes, call <span class="language-java"><code>waitTo
 
 <span class="language-java">If your pipeline uses an unbounded data source or sink, you must set the `streaming` option to `true`.</span>
 <span class="language-py">The Beam SDK for Python does not currently support streaming pipelines.</span>
-

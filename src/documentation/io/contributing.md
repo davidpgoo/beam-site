@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Contributing I/O Transforms"
+side_nav: sections-navigation/documentation.html
 permalink: /documentation/io/contributing/
 ---
 

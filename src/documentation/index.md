@@ -2,8 +2,7 @@
 layout: default
 title: "Learn about Beam"
 permalink: /documentation/
-section: "documentation"
-my_variable: section-navigation.html
+side_nav: sections-navigation/documentation.html
 redirect_from:
   - /learn/
   - /docs/learn/

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Apache Hadoop MapReduce Runner"
+side_nav: sections-navigation/runners.html
 ---
 # Using the Apache Hadoop MapReduce Runner
 

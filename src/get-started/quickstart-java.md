@@ -2,6 +2,7 @@
 layout: default
 title: "Beam Quickstart for Java"
 permalink: /get-started/quickstart-java/
+side_nav: sections-navigation/get-started.html
 redirect_from:
   - /get-started/quickstart/
   - /use/quickstart/
@@ -235,4 +236,3 @@ barrenly: 1
 * Join the Beam [users@]({{ site.baseurl }}/get-started/support#mailing-lists) mailing list.
 
 Please don't hesitate to [reach out]({{ site.baseurl }}/get-started/support) if you encounter any issues!
-

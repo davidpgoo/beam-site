@@ -2,6 +2,7 @@
 layout: default
 title: "Beam WordCount Examples"
 permalink: get-started/wordcount-example/
+side_nav: sections-navigation/get-started.html
 redirect_from: /use/wordcount-example/
 ---
 
@@ -949,4 +950,3 @@ results and writes them to a BigQuery table using `BigQueryIO.Write`.
 ```py
 # This feature is not yet available in the Beam SDK for Python.
 ```
-

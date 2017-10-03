@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body class="body {% if page.body_class %}{{page.body_class}}{% endif %}">
+  <body class="body {% if page.body_class %}{{page.body_class}}{% endif %}" data-spy="scroll" data-target=".nav-page" data-offset="0">
     {% include header.html %}
-    <div class="container">
-      <div class="row">
-        {% include sections-navigation/documentation.html %}
-        <div class="col-md-9 body__contained">
-          {{ content }}
-        </div>
+    <div class="clearfix container-main-content">
+      {% if page.side_nav %}
+      <div class="nav-section closed" data-offset-top="90" data-offset-bottom="500">
+        <span class="nav-section-back glyphicon glyphicon-menu-left"></span>
+        <nav>
+          <ul class="nav-section-list" data-section-nav>
+            {% include {{ page.side_nav }} %}
+          </ul>
+        </nav>
+      </div>
+      {% endif %}
+      {% if page.side_nav %}
+        <nav class="nav-page clearfix" data-offset-top="90" data-offset-bottom="500">
+          {% include toc.html html=content h_min=2 h_max=3 class="nav" %}
+        </nav>
+      {% endif %}
+      <div class="body__contained {% if page.side_nav %}body__nav-section{% endif %}">
+        {{ content }}
       </div>
     </div>
     {% include footer.html %}

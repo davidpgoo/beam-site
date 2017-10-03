@@ -2,6 +2,7 @@
 layout: default
 title: "Beam Contribution Guide"
 permalink: /contribute/contribution-guide/
+side_nav: sections-navigation/contribute.html
 redirect_from: /contribution-guide/
 ---
 
