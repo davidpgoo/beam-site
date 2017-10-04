@@ -189,7 +189,8 @@
           
 <ul class="nav">
   <li><a href="#overview">1. Overview</a></li>
-  <li><a href="#creating-a-pipeline">2. Creating a pipeline</a>
+  <li><a href="#creating-a-pipeline">2. Creating a pipeline</a></li>
+  <li><a href="#text-in-custom-tabs">Text in custom tabs</a>
     <ul>
       <li><a href="#configuring-pipeline-options">2.1. Configuring pipeline options</a></li>
     </ul>
@@ -269,7 +270,8 @@ how to implement Beam concepts in your pipelines.</p>
 <p><strong>Table of Contents:</strong></p>
 <ul id="markdown-toc">
   <li><a href="#overview" id="markdown-toc-overview">1. Overview</a></li>
-  <li><a href="#creating-a-pipeline" id="markdown-toc-creating-a-pipeline">2. Creating a pipeline</a>    <ul>
+  <li><a href="#creating-a-pipeline" id="markdown-toc-creating-a-pipeline">2. Creating a pipeline</a></li>
+  <li><a href="#text-in-custom-tabs" id="markdown-toc-text-in-custom-tabs">Text in custom tabs</a>    <ul>
       <li><a href="#configuring-pipeline-options" id="markdown-toc-configuring-pipeline-options">2.1. Configuring pipeline options</a>        <ul>
           <li><a href="#setting-pipelineoptions-from-command-line-arguments" id="markdown-toc-setting-pipelineoptions-from-command-line-arguments">2.1.1. Setting PipelineOptions from command-line arguments</a></li>
           <li><a href="#creating-custom-options" id="markdown-toc-creating-custom-options">2.1.2. Creating custom options</a></li>
@@ -521,6 +523,30 @@ to the <code class="highlighter-rouge">Pipeline</code> object when you create th
 <span class="n">p</span> <span class="o">=</span> <span class="n">beam</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="n">PipelineOptions</span><span class="p">())</span>
 
 </code></pre>
+</div>
+
+<h2 id="text-in-custom-tabs">Text in custom tabs</h2>
+<div class="language-java highlighter-rouge highlighter-custom">
+  <p>Text in Java Tab</p>
+  
+<figure class="highlight"><pre><code class="language-java" data-lang="java">  <span class="c1">// Start by defining the options for the pipeline.</span>
+  <span class="n">PipelineOptions</span> <span class="n">options</span> <span class="o">=</span> <span class="n">PipelineOptionsFactory</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
+
+  <span class="c1">// Then create the pipeline.</span>
+  <span class="n">Pipeline</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">options</span><span class="o">);</span>
+  </code></pre></figure>
+
+</div>
+<div class="language-py highlighter-rouge highlighter-custom">
+  <p>Text in Python Tab</p>
+  
+<figure class="highlight"><pre><code class="language-py" data-lang="py">  <span class="kn">import</span> <span class="nn">apache_beam</span> <span class="kn">as</span> <span class="nn">beam</span>
+<span class="kn">from</span> <span class="nn">apache_beam.options.pipeline_options</span> <span class="kn">import</span> <span class="n">PipelineOptions</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">beam</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="n">PipelineOptions</span><span class="p">())</span>
+
+  </code></pre></figure>
+
 </div>
 
 <h3 id="configuring-pipeline-options">2.1. Configuring pipeline options</h3>

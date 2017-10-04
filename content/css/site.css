@@ -6057,6 +6057,19 @@ div.cap-toggle {
   .highlight .il {
     color: #099; }
 
+.highlighter-custom {
+  border: 1px solid #ccc;
+  border-radius: 4px; }
+  .highlighter-custom pre {
+    background: #eef;
+    border-radius: 0;
+    border: 0;
+    margin: 0; }
+  .highlighter-custom p,
+  .highlighter-custom h2,
+  .highlighter-custom h3 {
+    margin: 10px; }
+
 nav.language-switcher, nav.runner-switcher {
   margin: 25px 0; }
   nav.language-switcher ul, nav.runner-switcher ul {
