@@ -1,7 +1,12 @@
 $(document).ready(function() {
   function PageNav(conf) {
-        idPageNav = conf["classNamePageNav"],
-        idMainContainer = conf["classNameMainContainer"];
+    var idPageNav = conf["classNamePageNav"];
+    var idMainContainer = conf["classNameMainContainer"];
+
+    var CONST = {
+      DESKTOP_BREAKPOINT: 1024,
+      PAGENAV_WIDTH: 240
+    };
 
     return {
       "idPageNav": idPageNav,
@@ -13,9 +18,9 @@ $(document).ready(function() {
           offset: $("." + idMainContainer).offset()
         };
 
-        if($(window).width() > 1024) {
+        if($(window).width() > CONST.DESKTOP_BREAKPOINT) {
           $("." + idPageNav).css({
-            left: mainContainerData.offset.left +  mainContainerData.width - 220
+            left: mainContainerData.offset.left +  mainContainerData.width - CONST.PAGENAV_WIDTH
           });
         } else {
           $("." + idPageNav).css({
@@ -41,7 +46,7 @@ $(document).ready(function() {
 
   PageNav(
     {
-      "classNamePageNav":"nav-page",
+      "classNamePageNav":"page-nav",
       "classNameMainContainer": "container-main-content"
     }
   ).init();

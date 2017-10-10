@@ -123,27 +123,6 @@ Pipeline p = Pipeline.create(options);
 %}
 ```
 
-## Text in custom tabs
-<div>
-  <p>Text in Java Tab</p>
-  {% highlight java %}
-  // Start by defining the options for the pipeline.
-  PipelineOptions options = PipelineOptionsFactory.create();
-
-  // Then create the pipeline.
-  Pipeline p = Pipeline.create(options);
-  {% endhighlight %}
-</div>
-{: .language-java .highlighter-rouge .highlighter-custom}
-<div>
-  <p>Text in Python Tab</p>
-  {% highlight py %}
-  {% github_sample /apache/beam/blob/master/sdks/python/apache_beam/examples/snippets/snippets.py tag:pipelines_constructing_creating
-  %}
-  {% endhighlight %}
-</div>
-{: .language-py .highlighter-rouge .highlighter-custom}
-
 ### 2.1. Configuring pipeline options
 
 Use the pipeline options to configure different aspects of your pipeline, such

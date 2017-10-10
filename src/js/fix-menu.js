@@ -1,6 +1,9 @@
 $(document).ready(function() {
   function FixMenu(conf) {
     var idMenu = conf["classNameMenu"];
+    var CONST = {
+      DESKTOP_BREAKPOINT: 1024
+    };
 
     return {
       "idMenu": idMenu,
@@ -10,7 +13,7 @@ $(document).ready(function() {
         var _self = this;
 
         $(window).scroll(function(e) {
-          if($(window).width() > 1024) {
+          if($(window).width() > CONST.DESKTOP_BREAKPOINT) {
             var scroll = $(window).scrollTop();
             var scrollMenu = scroll + $("." + idMenu).height() + _self.menuConfig.offsetTop;
             var scrollHeight = scroll + $(window).height();
@@ -41,7 +44,7 @@ $(document).ready(function() {
         });
 
         $(window).resize(function(e) {
-          if($(window).width() <= 1024) {
+          if($(window).width() <= CONST.DESKTOP_BREAKPOINT) {
             $("." + idMenu).css({
               top: '',
               bottom: ''
@@ -56,15 +59,6 @@ $(document).ready(function() {
     }
   }
 
-  FixMenu(
-    {
-      "classNameMenu":"nav-section"
-    }
-  ).init();
-
-  FixMenu(
-    {
-      "classNameMenu":"nav-page"
-    }
-  ).init();
+  FixMenu({"classNameMenu":"section-nav"}).init();
+  FixMenu({ "classNameMenu":"page-nav" }).init();
 });
