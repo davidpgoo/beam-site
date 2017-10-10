@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Apache Gearpump (incubating) Runner"
-side_nav: sections-navigation/runners.html
+section_menu: section-menu/runners.html
 permalink: /documentation/runners/gearpump/
 ---
 # Using the Apache Gearpump Runner

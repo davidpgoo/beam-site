@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Beam Java SDK Extensions"
-side_nav: sections-navigation/sdks.html
+section_menu: section-menu/sdks.html
 permalink: /documentation/sdks/java-extensions/
 ---
 # Apache Beam Java SDK Extensions

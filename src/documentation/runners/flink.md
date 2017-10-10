@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Apache Flink Runner"
-side_nav: sections-navigation/runners.html
+section_menu: section-menu/runners.html
 permalink: /documentation/runners/flink/
 redirect_from: /learn/runners/flink/
 ---

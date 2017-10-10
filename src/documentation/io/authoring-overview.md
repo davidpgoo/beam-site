@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Authoring I/O Transforms - Overview"
-side_nav: sections-navigation/documentation.html
+section_menu: section-menu/documentation.html
 permalink: /documentation/io/authoring-overview/
 ---
 

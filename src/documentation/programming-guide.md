@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Beam Programming Guide"
-side_nav: sections-navigation/documentation.html
+section_menu: section-menu/documentation.html
 permalink: /documentation/programming-guide/
 redirect_from:
   - /learn/programming-guide/

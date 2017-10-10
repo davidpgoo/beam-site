@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Apache Beam: Creating New Sources and Sinks with the Python SDK"
-side_nav: sections-navigation/sdks.html
+section_menu: section-menu/sdks.html
 permalink: /documentation/sdks/python-custom-io/
 ---
 # Creating New Sources and Sinks with the Python SDK

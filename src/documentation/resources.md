@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: section
 title: "Beam Learning Resources"
 permalink: /documentation/resources/
-side_nav: sections-navigation/documentation.html
+section_menu: section-menu/documentation.html
 redirect_from: /learn/resources/
 ---
 # Additional Resources for Learning about Apache Beam

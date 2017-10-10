@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Beam Logos"
-side_nav: sections-navigation/contribute.html
+section_menu: section-menu/contribute.html
 permalink: /contribute/logos/
 redirect_from:
   - /project/logos/

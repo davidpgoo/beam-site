@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Apache Beam Pydoc"
-side_nav: sections-navigation/sdks.html
+section_menu: section-menu/sdks.html
 permalink: /documentation/sdks/pydoc/
 redirect_to: /documentation/sdks/pydoc/current/
 ---

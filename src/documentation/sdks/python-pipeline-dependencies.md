@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Managing Python Pipeline Dependencies"
-side_nav: sections-navigation/sdks.html
+section_menu: section-menu/sdks.html
 permalink: /documentation/sdks/python-pipeline-dependencies/
 ---
 # Managing Python Pipeline Dependencies

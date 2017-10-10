@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: section
 title: "Beam Quickstart for Java"
 permalink: /get-started/quickstart-java/
-side_nav: sections-navigation/get-started.html
+section_menu: section-menu/get-started.html
 redirect_from:
   - /get-started/quickstart/
   - /use/quickstart/

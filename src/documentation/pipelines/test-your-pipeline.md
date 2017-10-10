@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Test Your Pipeline"
-side_nav: sections-navigation/documentation.html
+section_menu: section-menu/documentation.html
 permalink: /documentation/pipelines/test-your-pipeline/
 ---
 # Test Your Pipeline

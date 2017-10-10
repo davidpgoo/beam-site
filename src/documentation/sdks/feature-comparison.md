@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Beam Java SDK"
-side_nav: sections-navigation/sdks.html
+section_menu: section-menu/sdks.html
 permalink: /documentation/sdks/feature-comparison/
 ---
 # Beam SDK feature comparison

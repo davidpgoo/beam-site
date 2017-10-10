@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Ensuring Python Type Safety"
-side_nav: sections-navigation/sdks.html
+section_menu: section-menu/sdks.html
 permalink: /documentation/sdks/python-type-safety/
 ---
 #  Ensuring Python Type Safety

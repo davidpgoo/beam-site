@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Beam Presentation Materials"
-side_nav: sections-navigation/contribute.html
+section_menu: section-menu/contribute.html
 permalink: /contribute/presentation-materials/
 redirect_from: /learn/presentation-materials/
 ---

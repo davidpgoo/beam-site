@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: section
 title: "Beam Quickstart for Python"
 permalink: /get-started/quickstart-py/
-side_nav: sections-navigation/get-started.html
+section_menu: section-menu/get-started.html
 ---
 
 # Apache Beam Python SDK Quickstart

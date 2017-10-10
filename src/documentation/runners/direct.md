@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: section
 title: "Direct Runner"
 permalink: /documentation/runners/direct/
-side_nav: sections-navigation/runners.html
+section_menu: section-menu/runners.html
 redirect_from: /learn/runners/direct/
 ---
 # Using the Direct Runner

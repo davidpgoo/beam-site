@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Apache Maturity Model Assessment for Apache Beam"
-side_nav: sections-navigation/contribute.html
+section_menu: section-menu/contribute.html
 permalink: /contribute/maturity-model/
 ---
 

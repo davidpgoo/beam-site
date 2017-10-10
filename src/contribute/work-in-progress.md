@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: 'In Progress Work in Beam'
-side_nav: sections-navigation/contribute.html
+section_menu: section-menu/contribute.html
 permalink: /contribute/work-in-progress/
 ---
 

@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: section
 title: "Beam Mobile Gaming Example"
 permalink: /get-started/mobile-gaming-example/
-side_nav: sections-navigation/get-started.html
+section_menu: section-menu/get-started.html
 redirect_from: /use/mobile-gaming-example/
 ---
 

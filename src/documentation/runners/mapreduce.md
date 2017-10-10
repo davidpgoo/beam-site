@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: section
 title: "Apache Hadoop MapReduce Runner"
-side_nav: sections-navigation/runners.html
+section_menu: section-menu/runners.html
+permalink: /documentation/runners/mapreduce/
 ---
 # Using the Apache Hadoop MapReduce Runner
 

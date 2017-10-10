@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: section
 title: "Cloud Dataflow Runner"
 permalink: /documentation/runners/dataflow/
-side_nav: sections-navigation/runners.html
+section_menu: section-menu/runners.html
 redirect_from: /learn/runners/dataflow/
 ---
 # Using the Google Cloud Dataflow Runner

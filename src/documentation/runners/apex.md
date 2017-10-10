@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: section
 title: "Apache Apex Runner"
-side_nav: sections-navigation/runners.html
+section_menu: section-menu/runners.html
 permalink: /documentation/runners/apex/
 ---
 # Using the Apache Apex Runner
